@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Professional Music Player</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <main class="player-container">
+    <section class="player" role="region" aria-label="Music Player">
+      <header class="player-header">
+        <h1 class="player-title">Now Playing</h1>
+      </header>
+
+      <figure class="album-art">
+        <img src="images/album-placeholder.jpg" alt="Album Cover" id="album-art" />
+        <figcaption id="title-text">Song Title</figcaption>
+      </figure>
+
+      <div class="music-details">
+        <h2 id="title">Song Title</h2>
+        <p id="artist">Artist Name</p>
+      </div>
+
+      <audio id="audio" preload="metadata" controls style="display:none;">
+        <source src="songs/song1.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+
+      <div class="controls">
+        <button id="prev" aria-label="Previous Track" class="btn control-btn">
+          &#9664;&#9664;
+        </button>
+        <button id="play" aria-label="Play/Pause" class="btn control-btn">
+          &#9654;
+        </button>
+        <button id="next" aria-label="Next Track" class="btn control-btn">
+          &#9654;&#9654;
+        </button>
+      </div>
+
+      <div class="progress-container" aria-label="Audio progress">
+        <input type="range" id="progress" min="0" max="100" step="1" value="0" />
+      </div>
+
+      <div class="time-info">
+        <span id="current-time">0:00</span> / <span id="duration">0:00</span>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
